@@ -1,0 +1,65 @@
+# Comandos de configuración proyecto
+# 1. CREAMOS INICIALMENTE LA CARPETA DEL PROYECTO
+# 2. Configuramos el ambiente virtual dentro de la carpeta
+#    python -m venv env
+#    env\Scripts\activate 
+#    deactivate
+#    si genera problemas al activar el entorno virtual por temas de scripts, ejecutamos lo siguiente:
+#    python -m ensurepip --default-pip 
+#    pip install django
+#    pip install django
+#    pip install django-cors-headers 
+#    pip install djangorestframework 
+#    pip install mysqlclient
+#    rm learnitapp/models.py     
+# 3. Creamos nuestro primer proyecto dentro de la carpeta de este
+#    django-admin startproject learnit_bk_api
+#    configuramos el archivo settings: 
+"""  INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'corsheaders',
+    'rest_framework',
+    'learnitapp',    
+    ]
+    MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ]
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_learnit',
+        'USER': 'root',
+        'PASSWORD': 'MAlexcun92*',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+    CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    "https://sub.example.com",
+    "http://localhost:8080",
+    "http://127.0.0.1:9000",
+    ]
+}
+"""
+# Creamos nuestra primera API 
+#    django-admin startapp api 
+#    python manage.py makemigrations learnitapp   
+#    python manage.py migrate
+#    python manage.py createsuperuser
+
+# Realizar migración de base de datos a modelos de django
+#    python manage.py inspectdb > learnitapp/models.py  
+# Ejecutamos el servidor local de nuestra API
+#    python manage.py run server  

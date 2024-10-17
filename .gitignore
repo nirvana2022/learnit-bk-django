@@ -1,0 +1,29 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+/learnit_bk_api/__pycache__      # Ignorar el caché de Python de la API
+/learnitapp/__pycache__           # Ignorar el caché de Python de la app
+/learnitapp/migrations             # Ignorar las migraciones (si decides no hacer seguimiento)
+/venv                              # Ignorar el entorno virtual
+.db.sqlite3                       # Ignorar la base de datos SQLite
+.DS_Store                         # Ignorar archivos de metadatos en macOS
+.env.local                        # Ignorar archivos de entorno
+.env.development.local
+.env.test.local
+.env.production.local
+
+# logs
+npm-debug.log*                   # Ignorar logs de npm
+yarn-debug.log*                  # Ignorar logs de Yarn
+yarn-error.log*
